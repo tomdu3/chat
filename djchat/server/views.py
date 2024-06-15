@@ -44,4 +44,4 @@ class ServerListViewSet(viewsets.ViewSet):
                 raise ValidationError(detail=f"Server value error")
 
         serializer = ServerSerializer(self.queryset, many=True)
-        return Response(serializer.data)
+        return Response(serializer.data)  # channel details included in serializer
