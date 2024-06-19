@@ -76,6 +76,7 @@ class ServerListViewSet(viewsets.ViewSet):
             "with_num_members") == "true"  # Check if with_num_members is true
 
         # Check if user authentication is required for by_user or by_serverid
+        # BUG: this wasn't working, hence the change in > if by_user condition
         # if by_user or (by_serverid and not request.user.is_authenticated):
         #    raise AuthenticationFailed(detail="User not authenticated")
 
